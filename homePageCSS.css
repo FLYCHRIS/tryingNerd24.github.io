@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap");
+body {
+  background-color: #2F4858;
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#gridContianer {
+  display: grid;
+  grid-template-rows: 50px repeat(11, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  height: 935px;
+  max-width: 100%;
+}
+
+.menuBar {
+  grid-column: 1/13;
+  grid-row: 1/2;
+}
+.menuBar .options {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.menuBar .options .aboutMe {
+  background-color: #FF4504;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  border: 3px solid #707070;
+}
+.menuBar .options .aboutMe a {
+  padding-top: -10px;
+}
+.menuBar .options li {
+  display: inline-block;
+  padding-left: 35px;
+  align-items: center;
+}
+.menuBar .options li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  font-family: "Koulen", cursive;
+  text-align: center;
+}
+.menuBar .options li a:hover {
+  color: #04BEA0;
+}
+
+.photo {
+  grid-column: 2/6;
+  grid-row: 4/9;
+  background-color: #212020;
+  height: 550px;
+  width: 415px;
+  margin-top: -70px;
+  margin-left: -50px;
+  border: solid 4px #FF4504;
+  transform: rotate(-8deg);
+}
+.photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  justify-content: center;
+}
+
+.box1 {
+  grid-column: 1/8;
+  grid-row: 4/7;
+  background-color: #04BEA0;
+  border-top-right-radius: 50px;
+  margin-right: 40px;
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+.introMessage {
+  grid-column: 5/8;
+  grid-row: 4/13;
+  background-color: #04BEA0;
+  border-top-right-radius: 50px;
+  margin-left: 40px;
+  margin-top: -10px;
+  width: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.introMessage .messageFbox {
+  flex-grow: 100px;
+  padding: 0px 30px 0px 30px;
+}
+.introMessage .messageFbox p {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+.introMessage .imgFbox {
+  flex-grow: 70px;
+  margin: 70px 0px 40px 0px;
+}
+.introMessage .imgFbox img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.iAmQoutes {
+  grid-column: 9/12;
+  grid-row: 3/6;
+  margin-top: -30px;
+  margin-bottom: -400px;
+}
+.iAmQoutes h2 {
+  font-size: 100px;
+  text-align: center;
+  font-family: "Farro", sans-serif;
+  color: #FF4504;
+  text-align: center;
+}
+.iAmQoutes .words {
+  color: white;
+  display: inline-flex;
+  height: 120px;
+  overflow: hidden;
+}
+.iAmQoutes .words ul {
+  margin-top: 0px;
+  top: 0;
+  animation: slide 10s steps(5) infinite;
+  position: relative;
+}
+.iAmQoutes .words ul li {
+  list-style: none;
+}
+.iAmQoutes .words ul li span {
+  position: relative;
+}
+.iAmQoutes .words ul li span::after {
+  content: "";
+  left: 0;
+  border-left: 5px solid #FF4504;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #2F4858;
+  animation: typing 2s steps(9) infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 0px 0 40px;
+  }
+}
+@keyframes slide {
+  100% {
+    top: -660px;
+  }
+}
+
+/*# sourceMappingURL=homePageCSS.css.map */
